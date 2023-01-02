@@ -1,0 +1,17 @@
+.display{
+    margin-left: 30px;
+}
+
+li {
+    list-style: none;
+    color: black;
+}
+
+.list-group-item:hover {
+  background-color: silver;
+  color: black;
+}
+
+.card {
+  margin-top:50px;
+}
