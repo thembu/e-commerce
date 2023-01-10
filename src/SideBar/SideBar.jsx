@@ -1,6 +1,5 @@
 import React from "react";
 import "./SideBar.css";
-import ClothingItems from "../ItemsComponents/ClothingItems";
 import Sneaker from './sneaker.jpg'
 
 function SideBar() {
