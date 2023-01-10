@@ -1,0 +1,17 @@
+.contain {
+  background-color: whitesmoke;
+  height: 1000px;
+}
+
+li {
+  color: white;
+}
+
+ul {
+  display: flex;
+  cursor: pointer;
+}
+
+li:hover {
+  color : whitesmoke;
+}
