@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="contain">
       <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/#">
           <img src={logo} width="50px" height="50px" />
         </a>
 
