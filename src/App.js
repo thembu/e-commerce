@@ -8,7 +8,7 @@ function App() {
     <div className="contain">
       <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <a className="navbar-brand" href="/#">
-          <img src={logo} width="50px" height="50px" />
+          <img src={logo} width="50px" height="50px" alt=''/>
         </a>
 
         <form className="d-flex" role="search"></form>
