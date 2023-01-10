@@ -43,27 +43,27 @@ function App() {
             </button>
             <ul className=" dropdown-menu">
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/#">
                   Sports
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/#">
                   Electronics
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/#">
                   Clothing
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/#">
                   Accessories
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/#">
                   Fitness
                 </a>
               </li>
