@@ -2,6 +2,7 @@ import "./App.css";
 import MainDisplay from "./components/MainDisplay/MainDisplay";
 import logo from "./my_logo.jpg";
 import SideBar from "./components/SideBar/SideBar";
+ 
 
 function App() {
   return (
