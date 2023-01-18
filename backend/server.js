@@ -1,30 +1,21 @@
-const express = require("express");
-
-const app = express();
-
-const port = 3001;
+const express = require("express")
+const app = express()
+const groceriesRoute = require('./routes/groceries')
+const marketRoute = require('./routes/markets')
+ 
+const port = 3001
 
 //registers midddleware -> is a function which is called during the lifecycle of the request
 
 app.use(express.json())
 app.use(express.urlencoded())
 
+app.use('/api/v1/groceries',groceriesRoute)
+
+app.use('/api/v1/markets' ,marketRoute )
+
 app.listen(port, () => {
-  console.log("running server");
-});
+  console.log("running server")
+})
 
-const groceriesList = [];
 
-//get requests
-
-app.get("/groceries", (req, res) => {
-    res.send(groceriesList)
-});
-
-//post request
-
-app.post("/groceries", (req, res, next) => {
-    console.log(req.body);
-    groceriesList.push(req.body)
-    res.send(201)
-});
