@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SideBar.css";
 import Sneaker from './sneaker.jpg'
 
 function SideBar() {
+
+
+  useEffect(() => {
+
+    const fetchData =  () => {
+        fetch('/api/v1/auth')
+       .then((res) => res.json())
+       .then((data) => console.log(data))
+
+    }
+
+    fetchData()
+     
+  }, [])
+  
+
   return (
     <div className="display">
       <div className="categories">
@@ -28,7 +44,7 @@ function SideBar() {
      <div className="card" style={{width :'12rem', borderRadius:'1px'}}>
      <h2 className="card-title">Hot Deals</h2>
       <div className="card-body">
-      <img src={Sneaker} class="card-img" alt="..."/>
+      <img src={Sneaker} className="card-img" alt="..."/>
         <p className="card-text">Lorem, ipsum dolor.  R1000</p>
       </div>
      </div>
