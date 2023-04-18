@@ -1,12 +1,82 @@
+import React from "react";
 import "./MainDisplay.css";
 import sale from "./sale1.jpg";
 import tv from './tv.jpg'
 import laptop from './laptop.jpg'
+import logo from '../login/my_logo.jpg'
 import console from './console.jpg'
-
+import short from '../ItemsComponents/clothingItems/short1.jpg'
+import { Link } from "react-router-dom";
 function MainDisplay() {
   return (
     <div className="contain1">
+        
+        <nav className="navbar navbar-expand-lg bg-dark col-12" data-bs-theme="dark">
+        <a className="navbar-brand bg-dark" data-bs-theme="dark" href="/#">
+          <img src={logo} width="50px" height="50px" alt=''/>
+        </a>
+
+        <form className="d-flex" role="search"></form>
+        <input
+          className="form-control me-2"
+          type="search"
+          placeholder="search"
+          aria-label="search" />
+        <button className="btn btn-outline-primary" type="submit">
+          Search
+        </button>
+      </nav>
+
+      <nav className="navbar-nav me-auto mb-2 bg-secondary">
+        <ul className="navbar nav bg-dark">
+          <li className="nav-item bg-dark">
+            <h3 className="bg-dark">Home</h3>
+          </li>
+          <li className="nav-item bg-dark">
+            <h3 className="bg-dark">Products</h3>
+          </li>
+          <li className="nav-item bg-dark ">
+            <h3 className="bg-dark">About us</h3>
+          </li>
+           </ul>
+           </nav>
+    <div className="row">
+      <div className="col-2">
+      <div className="display">
+      <div className="categories">
+        <div className="card" style={{ width: "12rem" }}>
+          <ul className="list-group list-group-flush">
+
+            <li className="list-group-item">Electronics</li>
+            <li className="list-group-item">Shoes</li>
+            <Link to='MainPage/Items/ClothingItems'><li className="list-group-item">Clothes</li></Link>
+            <li className="list-group-item">Accessories</li>
+            <li className="list-group-item">Food</li>
+            <li className="list-group-item">Health care</li>
+            <li className="list-group-item">Food</li>
+            <li className="list-group-item">Fitness</li>
+            <li className="list-group-item">Toys</li>
+
+          </ul>
+        </div>
+      </div>
+
+
+     <div className="deals">
+     <div className="card" style={{width :'12rem', borderRadius:'1px'}}>
+     <h2 className="card-title">Hot Deals</h2>
+      <div className="card-body">
+      <img src={short} class="card-img" alt="..."/>
+        <p className="card-text">Lorem, ipsum dolor.  R1000</p>
+      </div>
+     </div>
+     </div>
+      
+
+    </div>
+
+      </div>
+      <div className="col-6">
       <div className="card bg-dark">
         <img src={sale} className="card-img-top" alt="..." />
         <div
@@ -58,6 +128,8 @@ function MainDisplay() {
             </div>
           </div>
         </div>
+      </div>
+      </div>
       </div>
   );
 }

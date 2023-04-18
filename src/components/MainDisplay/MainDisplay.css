@@ -1,6 +1,26 @@
+.col-6 {
+    margin-left: 200px;
+}
+
 .contain1 {
- margin-left: 260px;   
+    width: 1240px;
 }
-.card {
-    margin-top: 30px;
-}
+
+.contain {
+    background-color: whitesmoke;
+    height: 1000px;
+  }
+  
+  li {
+    color: white;
+  }
+  
+  ul {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    color : whitesmoke;
+  }
+  

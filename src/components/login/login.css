@@ -1,0 +1,34 @@
+img {
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 30rem;
+  }
+  
+  .space-top {
+    margin-top: 100px;
+  }
+  
+  .space-left {
+    margin-left: 450px;
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    
+  }
+  
+  link:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  #btn {
+    margin-top: 20px;
+  }
+
+  
