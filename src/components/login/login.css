@@ -1,3 +1,5 @@
+
+
 img {
     display: block;
     margin: auto;
@@ -10,7 +12,7 @@ img {
   }
   
   .space-left {
-    margin-left: 450px;
+    margin-left: 500px;
   }
   
   .link {
@@ -28,6 +30,9 @@ img {
   
   
   #btn {
+    display: grid;
+    justify-content: center;
+    grid-gap : 4px;
     margin-top: 20px;
   }
 

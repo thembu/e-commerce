@@ -2,7 +2,9 @@ const { Router } = require("express");
 const router = Router();
 const bcrypt = require("bcryptjs");
 const user = require("../database/schema/user");
-
+const jwt = require('jsonwebtoken');
+const { useParams } = require("react-router-dom");
+const JWT_SECTRET = 'FHIEWGWIFEGFIUEGQEFIIGQIUUGEIGIFGQ'
 // function to register user
 router.post("/register", async (req, res) => {
   const { userName, password, email } = req.body;
@@ -27,17 +29,33 @@ router.post("/register", async (req, res) => {
 router.post('/Login', async (req, res) => {
   const {userName, password} = req.body
 
-   await user.findOne({userName : userName}, 'password') // search database to see if the particular username exixts
-   .then( async (user) => {
-      
-    await bcrypt.compare(password, user.password)  // decrypt the passord and compare it with the password provided by the user
-    .then(passwordCheck => {
-      if(passwordCheck)  res.status(200).send('user found')
-      else if(!passwordCheck) res.status(404).send('user not found')
-    })
+
+  const users = await user.findOne({userName : userName})
+  .catch((err) => {
+    console.log('Error' , err)
+  })
+
+
+  if (!users)
+  return res
+  .status(400)
+  .json({msg : 'username found'})
+
+
+  
+ passwordCheck =  await bcrypt.compare(password, users.password)
+
+
+ if(!passwordCheck)
+ return res
+ .status(400)
+ .json({msg : 'password wrong'})
+    
+  const jwtToken = jwt.sign({id: user._id , users : password} , JWT_SECTRET)
+  res.json({message : 'hello welcome back', token : jwtToken})
 
   }) 
-  })
+  
   
 //function to get all data in the database
 
